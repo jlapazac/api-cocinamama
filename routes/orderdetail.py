@@ -12,7 +12,7 @@ async def write_data(orderdetail: OrderDetail):
         publicationdetail_id = orderdetail.publicationdetail_id,
         typeorder = orderdetail.typeorder,
         price = orderdetail.price,
-        quantity = orderdetail.quantity
+        amount = orderdetail.amount
     ))
     return conn.execute(ordersdetails.select()).fetchall()
 

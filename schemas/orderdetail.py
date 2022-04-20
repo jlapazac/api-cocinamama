@@ -5,4 +5,4 @@ class OrderDetail(BaseModel):
     publicationdetail_id: int
     typeorder: str
     price: float
-    quantity: int
+    amount: int

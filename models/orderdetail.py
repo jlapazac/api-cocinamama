@@ -11,5 +11,5 @@ ordersdetails = Table(
     Column('publicationdetail_id',Integer,ForeignKey('publicationsdetails.id')),
     Column('typeorder',String(50)),
     Column('price',Float),
-    Column('quantity',Integer)
+    Column('amount',Integer)
 )
