@@ -5,6 +5,10 @@ from schemas.index import Order, OrderComment, OrderStar, OrderUpdate, OrderStat
 
 order = APIRouter()
 
+@order.get('/')
+async def read_data():
+    return conn.execute(orders.select()).fetchall()
+
 @order.post('/')
 async def write_data(order: Order):
     conn.execute(orders.insert().values(
