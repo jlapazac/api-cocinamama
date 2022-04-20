@@ -15,3 +15,7 @@ async def write_data(orderdetail: OrderDetail):
         quantity = orderdetail.quantity
     ))
     return conn.execute(ordersdetails.select()).fetchall()
+
+@orderdetail.get('/order/{id}')
+async def read_data(id: int):
+    return conn.execute(ordersdetails.select().where(ordersdetails.c.order_id == id)).fetchall()
