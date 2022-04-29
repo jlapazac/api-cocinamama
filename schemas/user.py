@@ -6,3 +6,7 @@ class User(BaseModel):
     password: str
     phone: str
     photo: str
+
+class Login(BaseModel):
+    email: str
+    password: str
